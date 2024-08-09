@@ -26,10 +26,13 @@ def day_of_year(year, month, day):
         return None
         
     check_days = days_in_month(year, month)
-    if day <= 0 or day > check_days or check_days == None:
+    if check_days == None:
+        return None
+    if day <= 0 or day > check_days:
         return None
     for i in range(1,month):
         day += days_in_month(year, i)     
     return day
 
 print(day_of_year(1582, 12, 21))
+print(day_of_year(2002, 7, 21))
