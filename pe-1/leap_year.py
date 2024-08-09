@@ -21,6 +21,7 @@ def days_in_month(year, month):
     else:
         return None
 
+# change to sum by day of they
 def day_of_year(year, month, day):
     if year == 1582:
         return None
